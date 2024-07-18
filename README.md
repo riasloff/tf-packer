@@ -1,2 +1,17 @@
 # tf-packer
-example how to build openstack image with packer
+
+пример создания образа для облачной инфраструктуры c помощью packer
+
+## Подготовка
+* Для работы необходимо установить packer.
+* Для провайдера Selectel необходимо настроить сервисного пользователя. 
+* Экспортировать переменное окружение: `source rc.sh`
+
+
+
+* Для создания образа след последовательность:
+`packer validate build-docker.pkr.hcl`
+
+`packer build build-docker.pkr.hcl`
+
+Также в качестве provisioner можно использовать ансибл плейбук.
